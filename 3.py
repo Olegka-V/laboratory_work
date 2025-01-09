@@ -9,7 +9,12 @@ app = Flask(__name__)
 USERS = {"admin": bcrypt.hashpw(b"password", bcrypt.gensalt()).decode()}
 
 # Каталог товарів
-items = {}
+items = {
+    "1": {"name": "Arabica1", "price": 100.25, "size": "Medium"},
+    "2": {"name": "Arabica2", "price": 100.25, "size": "Medium"},
+    "3": {"name": "Arabica3", "price": 100.25, "size": "Medium"},
+    "4": {"name": "Arabica4", "price": 100.25, "size": "Medium"},
+    }
 
 # Декоратор для базової аутентифікації
 def authenticate(f):
